@@ -1,0 +1,34 @@
+npm init - package
+npm i express - Express 
+Create js file for express like app.js , index.js , server.js
+npm i nodemon - To run automatically
+
+{
+  "name": "node-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev":"nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "nodemon": "^3.1.0"
+  }
+}
+
+npm i mongodb - For installing mongodb
+
+we can use this ip address instead of localhost to connect mongodb 127.0.0.1
+
+"mongodb://localhost:27017"  "mongodb://127.0.0.1:27017"
+
+To Ignore the file or packages use .gitignore
+
+Use this middleware to avoid error app.use(express.json());
+
+whenever you update the env file stop the server and restart the server
