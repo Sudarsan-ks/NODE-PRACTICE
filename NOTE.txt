@@ -60,3 +60,5 @@ router.delete('/:id', async (req, res) => {
 To use PUT method = export async function updateProductbyID(id, updateProduct) {
     return await client.db("MongoDBpractice").collection("products").updateOne({ id: id },{$set: updateProduct});
 }
+
+npm i cors for avoiding errors
