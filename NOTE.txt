@@ -29,7 +29,7 @@ we can use this ip address instead of localhost to connect mongodb 127.0.0.1
 
 To Ignore the file or packages use .gitignore
 
-Use this middleware to avoid error app.use(express.json());
+Use this middleware to tell the date is in json app.use(express.json());
 
 whenever you update the env file stop the server and restart the server
 
@@ -62,3 +62,7 @@ To use PUT method = export async function updateProductbyID(id, updateProduct) {
 }
 
 npm i cors for avoiding errors
+
+npm i bcrypt
+
+npm i jsonwebtoken

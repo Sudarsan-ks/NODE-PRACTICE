@@ -1,9 +1,10 @@
 import { getproductbyquery, getproductbyID, addproduct, deleteproductbyID, updateProductbyID } from '../helper.js';
 import express from 'express'
+import {auth} from '../middleware/auth.js'
 
 const router = express.Router()
 
-router.get('/', async (req, res) => {
+router.get('/',auth, async (req, res) => {
     const { category, rating } = req.query;
     try {
         let sud = {};
