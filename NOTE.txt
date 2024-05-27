@@ -32,3 +32,31 @@ To Ignore the file or packages use .gitignore
 Use this middleware to avoid error app.use(express.json());
 
 whenever you update the env file stop the server and restart the server
+
+import * as dotenv from 'dotenv'
+dotenv.config() - To make work of .env file
+
+* Changing DNS to 8.8.8.8 will speed our network
+
+
+router.delete('/:id', async (req, res) => {
+    const { id } = req.params;
+    try {
+        if (result.deleteCount === 1) {
+            const Product = await deleteproductbyID(id);
+            res.send(Product);
+        }
+        else {
+            res.status(404).send({ message: "page not fount" });
+        }
+    }
+    catch (error) {
+        res.status(500).send({ message: "Server Error" });
+    }
+
+});
+
+
+To use PUT method = export async function updateProductbyID(id, updateProduct) {
+    return await client.db("MongoDBpractice").collection("products").updateOne({ id: id },{$set: updateProduct});
+}
